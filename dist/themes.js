@@ -5,6 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.validateThemeJSON = void 0;
 
+var _url = _interopRequireDefault(require("url"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * @param {{}} theme
  * @returns {string|boolean}
@@ -34,7 +38,15 @@ const validateThemeJSON = theme => {
 
   if (theme.website) {
     try {
-      new URL(theme.website); // eslint-disable-line
+      const parsed = _url.default.parse(theme.website);
+
+      if (!parsed.protocol || ['http:', 'https:'].indexOf(parsed.protocol) === -1) {
+        return `Invalid website protocol ${parsed.protocol}.`;
+      }
+
+      if (!parsed.host) {
+        return 'Invalid website host.';
+      }
     } catch (error) {
       return 'Invalid website URL.';
     }

@@ -1,3 +1,5 @@
+import url from 'url';
+
 /**
  * @param {{}} theme
  * @returns {string|boolean}
@@ -21,7 +23,13 @@ export const validateThemeJSON = (theme) => {
     }
     if (theme.website) {
         try {
-            new URL(theme.website); // eslint-disable-line
+            const parsed = url.parse(theme.website);
+            if (!parsed.protocol || ['http:', 'https:'].indexOf(parsed.protocol) === -1) {
+                return `Invalid website protocol ${parsed.protocol}.`;
+            }
+            if (!parsed.host) {
+                return 'Invalid website host.';
+            }
         } catch (error) {
             return 'Invalid website URL.';
         }
