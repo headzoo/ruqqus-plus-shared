@@ -1,0 +1,17 @@
+$color-primary: #5543bb;
+$color-secondary: #F4BD4D;
+$color-success: #5CB85C;
+$color-warning: #E0A800;
+$color-danger: #D9534F;
+$color-info: #FEDF4E;
+$color-link: #00ABE5;
+
+export {
+  colorPrimary: $color-primary;
+  colorSecondary: $color-secondary;
+  colorSuccess: $color-success;
+  colorWarning: $color-warning;
+  colorDanger: $color-danger;
+  colorInfo: $color-info;
+  colorLink: $color-link;
+}

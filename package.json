@@ -1,0 +1,8 @@
+{
+  "name": "ruqqus-plus-shared",
+  "version": "0.0.1",
+  "description": "Shared library for ruqqus-plus browser extension",
+  "main": "index.js",
+  "author": "headzoo",
+  "license": "MIT"
+}
