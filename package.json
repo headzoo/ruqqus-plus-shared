@@ -6,7 +6,7 @@
   "author": "headzoo",
   "license": "MIT",
   "scripts": {
-    "dist": "babel index.js --out-file dist/index.js"
+    "dist": "babel *.js --out-dir dist"
   },
   "dependencies": {
     "@babel/cli": "^7.10.5",
