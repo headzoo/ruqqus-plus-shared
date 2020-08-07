@@ -1,6 +1,6 @@
 {
   "name": "ruqqus-plus-shared",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Shared library for ruqqus-plus browser extension",
   "main": "index.js",
   "author": "headzoo",
