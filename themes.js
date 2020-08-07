@@ -2,7 +2,7 @@
  * @param {{}} theme
  * @returns {string|boolean}
  */
-const validateThemeJSON = (theme) => {
+export const validateThemeJSON = (theme) => {
     if (!theme.uuid) {
         return 'Missing UUID';
     }
