@@ -4,5 +4,13 @@
   "description": "Shared library for ruqqus-plus browser extension",
   "main": "index.js",
   "author": "headzoo",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dist": "babel index.js --out-file dist/index.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4"
+  }
 }
