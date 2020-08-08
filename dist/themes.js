@@ -11,10 +11,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * @param {{}} theme
+ * @param {boolean} checkUUID
  * @returns {string|boolean}
  */
-const validateThemeJSON = theme => {
-  if (!theme.uuid) {
+const validateThemeJSON = (theme, checkUUID = true) => {
+  if (checkUUID && !theme.uuid) {
     return 'Missing UUID';
   }
 

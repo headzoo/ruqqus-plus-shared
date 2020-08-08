@@ -2,10 +2,11 @@ import url from 'url';
 
 /**
  * @param {{}} theme
+ * @param {boolean} checkUUID
  * @returns {string|boolean}
  */
-export const validateThemeJSON = (theme) => {
-    if (!theme.uuid) {
+export const validateThemeJSON = (theme, checkUUID = true) => {
+    if (checkUUID && !theme.uuid) {
         return 'Missing UUID';
     }
     if (!theme.name || theme.name.trim() === '') {
